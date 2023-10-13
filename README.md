@@ -1,4 +1,4 @@
-# React Playground - A React playground for learning and experimenting with React.
+# React Playground: My Personal Sandbox for Diving Deep into React
 > Author: [**@cstayyab**](https://github.com/cstayyab)
 
 ## Table of Contents
