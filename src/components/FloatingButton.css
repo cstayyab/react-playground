@@ -1,0 +1,22 @@
+.floating-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #aaa;
+    z-index: 100;
+    font-size: 30px;
+    text-decoration: none;
+    transition: opacity .3s;
+    border-color: transparent;  
+}
+
+.floating-button:active {
+    outline: none;
+    box-shadow: 0 0 10px #000; /* or any other noticeable style */
+}
