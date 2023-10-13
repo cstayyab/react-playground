@@ -7,6 +7,7 @@
   - [Components](#components)
     - [File Upload](#file-upload)
     - [QR Code Generator](#qr-code-generator)
+    - [Tabs](#tabs)
 
 
 ## Usage
