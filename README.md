@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# React Playground - A React playground for learning and experimenting with React.
+> Author: [**@cstayyab**](https://github.com/cstayyab)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [React Playground](#react-playground)
+  - [Usage](#usage)
+  - [Components](#components)
+    - [File Upload](#file-upload)
+    - [QR Code Generator](#qr-code-generator)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Usage
+1. Clone the repository
+```bash
+git clone https://github.com/cstayyab/react-playground
+```
+2. Install dependencies
+```bash
+npm install
+```
+3. Run the project
+```bash
+npm start
+```
+4. Use Components in `src/App.js` to experiment with them. Just replace the content of `src/App.js` to the example code given for each component in the [Components](#components) section.
 
-### `npm start`
+## Components
+Here's the list of components that are available in this project with thier respective documentation.
+### File Upload
+Creates a File Drag and Drop component and stores it in IndexedDB as downloadable file
+```jsx
+// src/App.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+import React from 'react';
+import styles from './App.css';
+import FileUpload from './components/FileUpload';
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+function App() {
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh'
+    }}>
+      <FileUpload />
+    </div>
+  );
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export default App;
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### QR Code Generator
+Generates a QR Code for the given text and display it as a Card with its title and description. This component was created as a solution to problem given on [Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H/hub).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```jsx
+// src/App.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+import React from 'react';
+import QrCode from './components/QrCode';
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+function App() {
+  return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh'
+    }}>
+      <QrCode value="https://www.frontendmentor.io/" title="Improve your front-end skills by building projects" description="Scan your QR code to visit Frontend Mentor and take your coding skills to the next level"/>
+    </div>
+  );
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default App;
+```
