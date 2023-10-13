@@ -28,6 +28,9 @@ npm start
 Here's the list of components that are available in this project with thier respective documentation.
 ### File Upload
 Creates a File Drag and Drop component and stores it in IndexedDB as downloadable file
+
+![File Upload](./public/demo/file-upload.png)
+
 ```jsx
 // src/App.js
 
@@ -57,6 +60,9 @@ export default App;
 ### QR Code Generator
 Generates a QR Code for the given text and display it as a Card with its title and description. This component was created as a solution to problem given on [Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H/hub).
 
+![QR Code Generator](./public/demo/qr-code-generator.png)
+
+
 ```jsx
 // src/App.js
 
@@ -80,3 +86,5 @@ function App() {
 
 export default App;
 ```
+
+
