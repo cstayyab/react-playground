@@ -22,7 +22,7 @@ npm install
 ```bash
 npm start
 ```
-4. Use Components in `src/App.js` to experiment with them. Just replace the content of `src/App.js` to the example code given for each component in the [Components](#components) section.
+4. Open in browser and navigate to any component via [tab bar](#tabs) at the top
 
 ## Components
 Here's the list of components that are available in this project with thier respective documentation.
@@ -86,5 +86,38 @@ function App() {
 
 export default App;
 ```
+
+### Tabs
+Tabs are used to navigate between different components so you can preview all the available components easily. They are defined in `src/components/ReactTabs.js` and can be used as follows:
+
+![Tabs](./public/demo/tabs.png)
+
+```jsx
+// src/App.js
+
+import React from 'react';
+import FileUpload from './components/FileUpload';
+import QrCode from './components/QrCode';
+import Tabs from './components/ReactTabs';
+
+
+function App() {
+  return (
+    <Tabs tabs={[
+      {
+        title: 'File Upload',
+        component: <FileUpload />
+      },
+      {
+        title: 'QR Code',
+        component: <QrCode value="https://www.frontendmentor.io/" title="Improve your front-end skills by building projects" description="Scan your QR code to visit Frontend Mentor and take your coding skills to the next level" />
+      }
+    ]} active={0}/>
+  );
+}
+
+export default App;
+```
+
 
 
