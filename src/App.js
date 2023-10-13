@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styles from './App.css';
-import DragDropUpload from './components/DragDropUpload';
 import FileUpload from './components/FileUpload';
 import QrCode from './components/QrCode';
 
